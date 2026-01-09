@@ -1,6 +1,6 @@
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
+import js from "@eslint/js"
+import globals from "globals"
+import { defineConfig } from "eslint/config"
 import stylistic from '@stylistic/eslint-plugin'
 
 export default defineConfig([
@@ -9,8 +9,12 @@ export default defineConfig([
     plugins: {
       js, '@stylistic': stylistic
     },
-    rules: { '@stylistic/indent': ['error', 2], },
+    rules: {
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/no-extra-semi': 'error'
+    },
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser }
   },
-]);
+])
