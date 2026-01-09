@@ -11,8 +11,8 @@ export const game = (description, gameRound) => {
   for (let i = 0; i < rounds; i++) {
     const { question, correctAnswer } = gameRound()
     console.log(question)
-    const userAnswer = readlineSync.question('Your answer: ')
-    if (userAnswer === correctAnswer) {
+    const userAnswer = readlineSync.question('Your answer: ').trim()
+    if (String(userAnswer) === String(correctAnswer)) {
       console.log('Correct!')
     } else {
       console.log(`${userAnswer} is wrong answer (. Correct answer was ${correctAnswer}.`)
