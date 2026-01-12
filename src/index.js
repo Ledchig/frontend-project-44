@@ -8,7 +8,7 @@ export const game = (description, gameRound) => {
   console.log(`Hello, ${userName}!`)
   console.log(description)
 
-  for (let i = 0; i < rounds; i++) {
+  for (let i = 0; i < ROUNDS; i++) {
     const { question, correctAnswer } = gameRound()
     console.log(question)
     const userAnswer = readlineSync.question('Your answer: ').trim()
