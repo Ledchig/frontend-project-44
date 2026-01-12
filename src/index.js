@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync'
 
-const rounds = 3
+const ROUNDS = 3
 
 export const game = (description, gameRound) => {
   console.log('Welcome to the Brain Games!')
